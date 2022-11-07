@@ -12,7 +12,7 @@
     $dob=date_create("1999-01-22");
     $todaydate=today();
     if($dob>$todaydate){
-        return "You are not born yet!";
+        echo "You are not born yet! Remaining days are";
     }
     // $todaydate = strtotime($timestamp);  
     $date=date_diff($todaydate,$dob);
