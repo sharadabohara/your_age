@@ -9,10 +9,13 @@
 <body>
     <?php
     // date_default_timezone_set('Asia/Kathmandu'); 
-    $birthdate=date_create("1999-01-22");
+    $dob=date_create("1999-01-22");
     $todaydate=today();
+    if($dob>$todaydate){
+        return "You are not born yet!";
+    }
     // $todaydate = strtotime($timestamp);  
-    $date=date_diff($todaydate,$birthdate);
+    $date=date_diff($todaydate,$dob);
     echo $date->format("%a days");
     
     ?>
